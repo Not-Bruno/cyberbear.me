@@ -1,125 +1,106 @@
-/* Allgemeines Styling */
 body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: url('images/background.png') no-repeat center center/cover;
-    background-size: 1000px 1000px; /* Feste Bildgröße */
-    background-position: 10% center;
+    padding: 0;
+    background: #f3f4f6;
     color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #1f2937;
+    color: #f9fafb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
 }
 
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dunkles Overlay für besseren Kontrast */
-    z-index: -1; /* Hintergrund hinter den Inhalt legen */
-}
-
-/* Header */
-header {
-    padding: 20px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-bottom: 2px solid #ff6f3c;
-    width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    color: #ff6f3c;
-}
-
-/* Über mich */
-.about-me {
-    background: rgba(255, 255, 255, 0.9);
-    color: #333;
-    text-align: center;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    max-width: 800px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.about-me h2 {
-    font-size: 2rem;
+header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
     margin-bottom: 10px;
-    color: #ff6f3c;
 }
 
-.about-me p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin: 0;
-}
-
-/* Projekt-Container */
-.project-container {
+nav ul {
+    list-style: none;
+    padding: 0;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
 }
 
-/* Projekt-Karte */
-.project-card {
-    background: rgba(255, 255, 255, 0.9);
-    color: #333;
-    border-radius: 8px;
-    overflow: hidden;
-    width: 300px;
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f9fafb;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #60a5fa;
+}
+
+section {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.projekt {
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+.projekt:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.project-card img {
-    width: 100%;
-    height: 200px;
+.projekt .details {
+    flex: 1;
+}
+
+.projekt img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-left: 15px;
     object-fit: cover;
 }
 
-.project-card .content {
-    padding: 15px;
+.projekt h3 {
+    color: #1f2937;
 }
 
-.project-card .content h2 {
-    font-size: 1.5rem;
-    margin: 0 0 10px 0;
-    color: #ff6f3c;
-}
-
-.project-card .content p {
-    font-size: 1rem;
-    margin: 0 0 15px 0;
-}
-
-.project-card .content a {
-    display: inline-block;
-    padding: 10px 15px;
-    background: #ff6f3c;
-    color: white;
+.projekt a {
     text-decoration: none;
-    border-radius: 4px;
+    color: #3b82f6;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
-.project-card .content a:hover {
-    background: #e65c2e;
+.projekt a:hover {
+    color: #2563eb;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #1f2937;
+    color: #f9fafb;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }

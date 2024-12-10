@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Projekte</title>
+    <title>Mein Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-        <h1>Meine Projekte</h1>
+        <img src="avatar.jpg" alt="Avatar">
+        <h1>Willkommen zu meinem Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#ueber-mich">Über mich</a></li>
+                <li><a href="#projekte">Meine Projekte</a></li>
+            </ul>
+        </nav>
     </header>
-    <section class="about-me">
-        <h2>Über mich</h2>
-        <p>
-            Hallo! Mein Name ist [Dein Name], und ich bin ein leidenschaftlicher Entwickler, Designer oder Kreativer. 
-            Ich liebe es, spannende Projekte zu entwickeln und innovative Lösungen zu finden. 
-            Hier findest du einige meiner Arbeiten.
-        </p>
-    </section>
     <main>
-        <div class="project-container" id="project-container">
-            <!-- Projekte werden dynamisch hinzugefügt -->
-        </div>
+        <section id="ueber-mich">
+            <h2>Über mich</h2>
+            <p>Ein kurzer Text über deine Person...</p>
+        </section>
+        <section id="projekte">
+            <h2>Mein Projekte</h2>
+            <div id="projekt-container"></div>
+        </section>
     </main>
+    <footer>
+        <p>&copy; 2024 Bruno</p>
+    </footer>
     <script src="script.js"></script>
 </body>
+
 </html>

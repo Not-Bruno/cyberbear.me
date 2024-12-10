@@ -1,40 +1,34 @@
-// Beispiel-Daten
-const projects = [
+// Projekte-Daten
+const projekte = [
     {
-        title: "Projekt 1",
-        description: "Dies ist eine kurze Beschreibung von Projekt 1.",
-        image: "https://via.placeholder.com/300x200",
-        link: "#"
+        name: "Laboratory",
+        beschreibung: "Eine Webseite, um meine Projekte darzustellen.",
+        link: "#",
+        bild: "projekt1.jpg"
     },
     {
-        title: "Projekt 2",
-        description: "Dies ist eine kurze Beschreibung von Projekt 2.",
-        image: "https://via.placeholder.com/300x200",
-        link: "#"
-    },
-    {
-        title: "Projekt 3",
-        description: "Dies ist eine kurze Beschreibung von Projekt 3.",
-        image: "https://via.placeholder.com/300x200",
-        link: "#"
+        name: "Blog Plattform",
+        beschreibung: "Eine Plattform für Blogs mit einem minimalistischen Design.",
+        link: "#",
+        bild: "projekt2.jpg"
     }
 ];
 
 // Projekte dynamisch hinzufügen
-const projectContainer = document.getElementById("project-container");
+const projektContainer = document.getElementById("projekt-container");
 
-projects.forEach(project => {
-    const projectCard = document.createElement("div");
-    projectCard.className = "project-card";
+projekte.forEach(projekt => {
+    const projektElement = document.createElement("div");
+    projektElement.classList.add("projekt");
 
-    projectCard.innerHTML = `
-        <img src="${project.image}" alt="${project.title}">
-        <div class="content">
-            <h2>${project.title}</h2>
-            <p>${project.description}</p>
-            <a href="${project.link}" target="_blank">Zum Projekt</a>
-        </div>
+    projektElement.innerHTML = `
+      <div class="details">
+        <h3>${projekt.name}</h3>
+        <p>${projekt.beschreibung}</p>
+        <a href="${projekt.link}" target="_blank">Mehr erfahren</a>
+      </div>
+      <img src="${projekt.bild}" alt="${projekt.name}">
     `;
 
-    projectContainer.appendChild(projectCard);
+    projektContainer.appendChild(projektElement);
 });
