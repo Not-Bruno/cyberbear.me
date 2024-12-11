@@ -4,33 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Portfolio</title>
+    <title>Modernes Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <img src="avatar.jpg" alt="Avatar">
+    <header class="sticky-header">
+        <img src="images/avatar.jpg" alt="Avatar">
         <h1>Willkommen zu meinem Portfolio</h1>
         <nav>
             <ul>
-                <li><a href="#ueber-mich">Über mich</a></li>
-                <li><a href="#projekte">Meine Projekte</a></li>
+                <li><a href="#">Über mich</a></li>
+                <li><a href="#">Meine Projekte</a></li>
+                <li><a href="https://github.com/Not-Bruno/" target="_blank">Meine GitHub</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="ueber-mich">
+        <section id="ueber-mich" class="fade-in">
             <h2>Über mich</h2>
             <p>Ein kurzer Text über deine Person...</p>
         </section>
-        <section id="projekte">
-            <h2>Mein Projekte</h2>
-            <div id="projekt-container"></div>
+        <section id="projekte" class="fade-in">
+            <h2>Meine Projekte</h2>
+            <div id="projekt-container" class="projekt-grid"></div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Bruno</p>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
